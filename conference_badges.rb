@@ -1,10 +1,12 @@
 #  Write your code here.
+attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
+
 def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(names)
-  names.collect {|name| badge_maker(name)}
+def batch_badge_creator(attendees)
+  attendees.each {|attendee| "Hello, my name is #{attendee}"}
 end
 
 def assign_rooms(room)
@@ -12,6 +14,6 @@ def assign_rooms(room)
 end
 
 def printer(attendees)
-  batch_badge_creator(attendees).each {|attendee| puts attendee }
+  batch_badge_creator(attendees).each {|attendee| puts attendee}
   assign_rooms(attendees).each {|room| puts room}
 end
