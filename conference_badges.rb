@@ -6,11 +6,11 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  attendees.each {|attendee| "Hello, my name is #{attendee}"}
+  attendees.collect {|attendee| "Hello, my name is #{attendee}."}
 end
 
-def assign_rooms(room)
-  room.each_with_index.collect {|name, index| "Hello, #{name}! You'll be assigned to room #{index + 1}!"}
+def assign_rooms(attendees)
+  attendees.each_with_index.collect {|name, index| "Hello, #{name}! You'll be assigned to room #{index + 1}!"}
 end
 
 def printer(attendees)
